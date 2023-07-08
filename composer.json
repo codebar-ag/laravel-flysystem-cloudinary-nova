@@ -1,24 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "codebar-ag/laravel-flysystem-cloudinary-nova",
+    "description": "This is my package laravel-flysystem-cloudinary-nova",
     "keywords": [
-        ":vendor_name",
+        "codebar-ag",
         "laravel",
-        ":package_slug"
+        "laravel-flysystem-cloudinary-nova"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "Sebastian Fix",
+            "email": "sebastian.fix@codebar.ch",
+            "homepage": "https://www.codebar.ch",
+            "role": "Software Engineer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0",
+        "codebar-ag/laravel-flysystem-cloudinary": "^2.20",
+        "laravel/nova": "^4.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
@@ -33,15 +36,21 @@
         "phpstan/phpstan-phpunit": "^1.0",
         "spatie/laravel-ray": "^1.26"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "CodebarAg\\FlysystemCloudinaryNova\\": "src/",
+            "CodebarAg\\FlysystemCloudinaryNova\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "CodebarAg\\FlysystemCloudinaryNova\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -61,11 +70,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
-            }
+                "CodebarAg\\FlysystemCloudinaryNova\\FlysystemCloudinaryNovaServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
