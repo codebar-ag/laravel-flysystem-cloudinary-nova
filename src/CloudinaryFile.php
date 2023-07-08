@@ -2,8 +2,8 @@
 
 namespace CodebarAg\FlysystemCloudinaryNova;
 
-use Laravel\Nova\Fields\File;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\File;
 
 class CloudinaryFile extends File
 {
@@ -11,10 +11,9 @@ class CloudinaryFile extends File
     {
         parent::__construct($name, $attribute, $thumbnailUrl);
 
-
         $this->disk('cloudinary')
             ->storeAs(function (Request $request) use ($attribute) {
-                    return sha1($request->$attribute->getClientOriginalName());
+                return sha1($request->$attribute->getClientOriginalName());
             });
     }
 }
