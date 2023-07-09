@@ -1,83 +1,60 @@
-# This is my package laravel-flysystem-cloudinary-nova
+<img src="https://banners.beyondco.de/Laravel%20Flysystem%20Cloudinary%20Nova.png?theme=light&packageManager=composer+require&packageName=codebar-ag%2Flaravel-flysystem-cloudinary-nova&pattern=circuitBoard&style=style_2&description=An+opinionated+way+to+integrate+Cloudinary+with+the+Laravel+filesystem+and+Laravel+Nova&md=1&showWatermark=0&fontSize=150px&images=cloud&widths=500&heights=500">
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codebar-ag/laravel-flysystem-cloudinary-nova.svg?style=flat-square)](https://packagist.org/packages/codebar-ag/laravel-flysystem-cloudinary-nova)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/codebar-ag/laravel-flysystem-cloudinary-nova/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/codebar-ag/laravel-flysystem-cloudinary-nova/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/codebar-ag/laravel-flysystem-cloudinary-nova.svg?style=flat-square)](https://packagist.org/packages/codebar-ag/laravel-flysystem-cloudinary-nova)
+[![run-tests](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml)
+[![PHPStan](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml)
+[![Fix PHP code style issues](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+## 🛠 Requirements
 
-## Support us
+- Cloudinary Account
+- [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary)
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-flysystem-cloudinary-nova.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-flysystem-cloudinary-nova)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
-## Installation
+## ⚙️ Installation
 
 You can install the package via composer:
 
-```bash
+```shell
 composer require codebar-ag/laravel-flysystem-cloudinary-nova
 ```
 
-You can publish and run the migrations with:
+Follow the installation instructions of [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary#readme)
 
-```bash
-php artisan vendor:publish --tag="laravel-flysystem-cloudinary-nova-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag="laravel-flysystem-cloudinary-nova-config"
-```
-
-This is the contents of the published config file:
+## 📝 Usage
 
 ```php
-return [
-];
+use CodebarAg\FlysystemCloudinaryNova\CloudinaryImage;
+
+CloudinaryImage::make('Image')
 ```
 
-Optionally, you can publish the views using
+## 🚧 Testing
 
-```bash
-php artisan vendor:publish --tag="laravel-flysystem-cloudinary-nova-views"
-```
-
-## Usage
-
-```php
-$laravelFlysystemCloudinaryNova = new CodebarAg\FlysystemCloudinaryNova();
-echo $laravelFlysystemCloudinaryNova->echoPhrase('Hello, CodebarAg!');
-```
-
-## Testing
-
-```bash
+Run the tests:
+```shell
 composer test
 ```
 
-## Changelog
+## 📝 Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Contributing
+## ✏️ Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
-## Security Vulnerabilities
+## 🧑‍💻 Security Vulnerabilities
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## Credits
+## 🙏 Credits
 
-- [Sebastian Fix](https://github.com/codebar-ag)
+- [Ruslan Steiger](https://github.com/SuddenlyRust)
+- [Sebastian Fix](https://github.com/StanBarrows)
 - [All Contributors](../../contributors)
+- [Skeleton Repository from Spatie](https://github.com/spatie/package-skeleton-laravel)
+- [Laravel Package Training from Spatie](https://spatie.be/videos/laravel-package-training)
 
 ## License
 
