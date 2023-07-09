@@ -13,14 +13,14 @@ class CloudinaryImage extends Image
         parent::__construct($name, $attribute, $disk, $storageCallback);
 
         // Check if cloudinary disk is configured
-        if (!config('filesystems.disks.cloudinary')) {
+        if (! config('filesystems.disks.cloudinary')) {
             throw new Exception('Cloudinary disk is not configured');
         }
 
         // Set the disk to cloudinary and store as by default
         $this->disk('cloudinary')
             ->storeAs(function (Request $request) use ($attribute) {
-                    return sha1($request->$attribute->getClientOriginalName());
+                return sha1($request->$attribute->getClientOriginalName());
             });
     }
 }
