@@ -1,79 +1,79 @@
 {
-    "name": "codebar-ag/laravel-flysystem-cloudinary-nova",
-    "description": "This is my package laravel-flysystem-cloudinary-nova",
-    "keywords": [
-        "codebar-ag",
-        "laravel",
-        "laravel-flysystem-cloudinary-nova"
-    ],
-    "homepage": "https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Sebastian Fix",
-            "email": "sebastian.fix@codebar.ch",
-            "homepage": "https://www.codebar.ch",
-            "role": "Software Engineer"
-        }
-    ],
-    "require": {
-        "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.14.0",
-        "illuminate/contracts": "^10.0",
-        "codebar-ag/laravel-flysystem-cloudinary": "^2.20",
-        "laravel/nova": "^4.0"
-    },
-    "require-dev": {
-        "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^2.0",
-        "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "CodebarAg\\FlysystemCloudinaryNova\\": "src/",
-            "CodebarAg\\FlysystemCloudinaryNova\\Database\\Factories\\": "database/factories/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "CodebarAg\\FlysystemCloudinaryNova\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
-    },
-    "config": {
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "phpstan/extension-installer": true
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "CodebarAg\\FlysystemCloudinaryNova\\FlysystemCloudinaryNovaServiceProvider"
-            ]
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "codebar-ag/laravel-flysystem-cloudinary-nova",
+  "description": "This is my package laravel-flysystem-cloudinary-nova",
+  "keywords": [
+    "codebar-ag",
+    "laravel",
+    "laravel-flysystem-cloudinary-nova"
+  ],
+  "homepage": "https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Fix",
+      "email": "sebastian.fix@codebar.ch",
+      "homepage": "https://www.codebar.ch",
+      "role": "Software Engineer"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "spatie/laravel-package-tools": "^1.14.0",
+    "illuminate/contracts": "^10.0",
+    "codebar-ag/laravel-flysystem-cloudinary": "^3.0",
+    "laravel/nova": "^4.0"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.0",
+    "nunomaduro/collision": "^7.9",
+    "nunomaduro/larastan": "^2.0.1",
+    "orchestra/testbench": "^8.0",
+    "pestphp/pest": "^2.0",
+    "pestphp/pest-plugin-arch": "^2.0",
+    "pestphp/pest-plugin-laravel": "^2.0",
+    "phpstan/extension-installer": "^1.1",
+    "phpstan/phpstan-deprecation-rules": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "spatie/laravel-ray": "^1.26"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CodebarAg\\FlysystemCloudinaryNova\\": "src/",
+      "CodebarAg\\FlysystemCloudinaryNova\\Database\\Factories\\": "database/factories/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CodebarAg\\FlysystemCloudinaryNova\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "CodebarAg\\FlysystemCloudinaryNova\\FlysystemCloudinaryNovaServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
