@@ -50,7 +50,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## 🙏 Credits
 
-- [Ruslan Steiger](https://github.com/SuddenlyRust)
+- [Rhys Lees](https://github.com/RhysLees)
 - [Sebastian Fix](https://github.com/StanBarrows)
 - [All Contributors](../../contributors)
 - [Skeleton Repository from Spatie](https://github.com/spatie/package-skeleton-laravel)
