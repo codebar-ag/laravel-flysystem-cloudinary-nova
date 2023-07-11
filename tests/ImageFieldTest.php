@@ -10,7 +10,7 @@ beforeEach(function () {
             'url' => [
                 'secure' => (bool) env('CLOUDINARY_SECURE_URL', true),
             ],
-        ]
+        ],
     ]);
 });
 
@@ -22,7 +22,7 @@ it('extends nova image', function () {
 
 it('throws an exception if cloudinary disk is not configured', function () {
     config([
-        'filesystems.disks.cloudinary' => []
+        'filesystems.disks.cloudinary' => [],
     ]);
 
     CodebarAg\FlysystemCloudinaryNova\CloudinaryImage::make('Image');
