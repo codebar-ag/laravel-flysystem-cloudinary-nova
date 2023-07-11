@@ -14,7 +14,7 @@ class CloudinaryImage extends Image
 
         // Check if cloudinary disk is configured
         if (! config('filesystems.disks.cloudinary')) {
-            throw new Exception('Cloudinary disk is not configured');
+            throw new Exception('Cloudinary disk is not configured.');
         }
 
         // Set the disk to cloudinary and store as by default
