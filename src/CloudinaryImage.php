@@ -19,6 +19,6 @@ class CloudinaryImage extends Image
 
         // Set the disk to cloudinary and store as by default
         $this->disk('cloudinary')
-            ->storeAs(fn () => Str::orderedUuid());
+            ->storeAs(fn () => Str::orderedUuid()->toString());
     }
 }
