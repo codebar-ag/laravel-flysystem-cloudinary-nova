@@ -18,7 +18,7 @@ class CloudinaryImage extends Image
             throw new Exception('Cloudinary disk is not configured.');
         }
 
-        $this->thumbnail(function () use ($disk) {
+        $this->thumbnail(function () {
             return $this->value
                 ? Storage::disk('cloudinary')->url([
                     'path' => $this->value,
@@ -41,7 +41,7 @@ class CloudinaryImage extends Image
                 ])
                 : null;
         })
-        ->disk($disk)
-        ->storeAs(fn () => Str::orderedUuid()->toString());
+            ->disk($disk)
+            ->storeAs(fn () => Str::orderedUuid()->toString());
     }
 }
