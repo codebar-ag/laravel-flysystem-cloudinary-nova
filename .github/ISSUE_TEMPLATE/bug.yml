@@ -15,7 +15,6 @@ body:
       placeholder: I cannot currently do X thing because when I do, it breaks X thing.
     validations:
       required: true
-
   - type: input
     id: package-version
     attributes:

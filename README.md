@@ -11,6 +11,16 @@
 - Cloudinary Account
 - [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary)
 
+## 🛠 Requirements
+
+- Cloudinary Account
+
+| Package 	 | PHP 	  | Laravel 	     | Flysystem 	 |
+|-----------|--------|---------------|-------------|
+| >v2.0     | >8.3   | > Laravel 11  | > 3.0       |
+| >v1.0     | >8.2   | > Laravel 10  | > 3.0       |
+
+
 ## ⚙️ Installation
 
 You can install the package via composer:
@@ -19,7 +29,8 @@ You can install the package via composer:
 composer require codebar-ag/laravel-flysystem-cloudinary-nova
 ```
 
-Follow the installation instructions of [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary#readme)
+Follow the installation instructions
+of [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary#readme)
 
 ## 📝 Usage
 
@@ -32,6 +43,7 @@ CloudinaryImage::make('Image')
 ## 🚧 Testing
 
 Run the tests:
+
 ```shell
 composer test
 ```
