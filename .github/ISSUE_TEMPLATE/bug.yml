@@ -15,14 +15,7 @@ body:
           placeholder: I cannot currently do X thing because when I do, it breaks X thing.
       validations:
           required: true
-    - type: textarea
-      id: how-to-reproduce
-      attributes:
-          label: How to reproduce the bug
-          description: How did this occur, please add any config values used and provide a set of reliable steps if possible.
-          placeholder: When I do X I see Y.
-      validations:
-          required: true
+
     - type: input
       id: package-version
       attributes:
@@ -57,10 +50,3 @@ body:
         - macOS
         - Windows
         - Linux
-    - type: textarea
-      id: notes
-      attributes:
-          label: Notes
-          description: Use this field to provide any other notes that you feel might be relevant to the issue.
-      validations:
-          required: false

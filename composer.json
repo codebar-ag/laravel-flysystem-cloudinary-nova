@@ -20,7 +20,7 @@
     "php": "^8.2",
     "spatie/laravel-package-tools": "^1.14.0",
     "illuminate/contracts": "^10.0",
-    "codebar-ag/laravel-flysystem-cloudinary": "^3.0",
+    "codebar-ag/laravel-flysystem-cloudinary": "^4.0",
     "laravel/nova": "^4.0"
   },
   "require-dev": {
