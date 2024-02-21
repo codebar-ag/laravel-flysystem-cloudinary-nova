@@ -1,0 +1,12 @@
+name: Questions & Feature
+description: Open Questions & Feature Requests
+title: "[Feature]: "
+labels: ["feature"]
+body:
+  - type: textarea
+    id: question-feature
+    attributes:
+      label: Questions & Feature?
+      description: Enter a Questions & Feature Request
+    validations:
+      required: true
