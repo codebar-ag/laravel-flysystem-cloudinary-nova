@@ -2,10 +2,10 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/codebar-ag/laravel-flysystem-cloudinary-nova.svg?style=flat-square)](https://packagist.org/packages/codebar-ag/laravel-flysystem-cloudinary-nova)
 [![Total Downloads](https://img.shields.io/packagist/dt/codebar-ag/laravel-flysystem-cloudinary-nova.svg?style=flat-square)](https://packagist.org/packages/codebar-ag/laravel-flysystem-cloudinary-nova)
-[![run-tests](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml)
-[![PHPStan](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml)
-[![Fix PHP code style issues](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml)
-
+[![GitHub-Tests](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/run-tests.yml)
+[![GitHub Code Style](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml/badge.svg?branch=main)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/fix-php-code-style-issues.yml)
+[![PHPStan](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml/badge.svg)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/phpstan.yml)
+[![Dependency Review](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/codebar-ag/laravel-flysystem-cloudinary-nova/actions/workflows/dependency-review.yml)
 ## 🛠 Requirements
 
 - Cloudinary Account
@@ -15,10 +15,12 @@
 
 - Cloudinary Account
 
-| Package 	 | PHP 	  | Laravel 	     | Flysystem 	 |
-|-----------|--------|---------------|-------------|
-| >v2.0     | >8.3   | > Laravel 11  | > 3.0       |
-| >v1.0     | >8.2   | > Laravel 10  | > 3.0       |
+| Package 	 | PHP 	       | Laravel 	 | Nova   | Flysystem 	 |
+|-----------|-------------|-----------|--------|-------------|
+| v12.0     | ^8.2 - ^8.4 | 12.x      | ^5.2.6 | 3.25.1      |
+| v11.0     | ^8.2 - ^8.3 | 11.x      | ^4.3   | 3.0         |
+| v2.0.0    | ^8.2        | 11.x      | ^4.3   | 3.0         |
+| v1.0.0    | ^8.2        | 10.x      | ^4.3   | 3.0         |
 
 
 ## ⚙️ Installation

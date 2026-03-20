@@ -20,6 +20,7 @@ class CloudinaryImage extends Image
 
         $this->thumbnail(function () {
             return $this->value
+                // @phpstan-ignore-next-line
                 ? Storage::disk('cloudinary')->url([
                     'path' => $this->value,
                     'options' => [
@@ -32,6 +33,7 @@ class CloudinaryImage extends Image
                 : null;
         })->preview(function () {
             return $this->value
+                // @phpstan-ignore-next-line
                 ? Storage::disk('cloudinary')->url([
                     'path' => $this->value,
                     'options' => [
