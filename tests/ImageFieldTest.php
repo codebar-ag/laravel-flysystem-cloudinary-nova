@@ -1,5 +1,8 @@
 <?php
 
+use CodebarAg\FlysystemCloudinaryNova\CloudinaryImage;
+use Laravel\Nova\Fields\Image;
+
 beforeEach(function () {
     config([
         'filesystems.disks.cloudinary' => [
@@ -15,9 +18,9 @@ beforeEach(function () {
 });
 
 it('extends nova image', function () {
-    $field = CodebarAg\FlysystemCloudinaryNova\CloudinaryImage::make('Image');
+    $field = CloudinaryImage::make('Image');
 
-    expect($field)->toBeInstanceOf(Laravel\Nova\Fields\Image::class);
+    expect($field)->toBeInstanceOf(Image::class);
 });
 
 it('throws an exception if cloudinary disk is not configured', function () {
@@ -25,15 +28,15 @@ it('throws an exception if cloudinary disk is not configured', function () {
         'filesystems.disks.cloudinary' => [],
     ]);
 
-    CodebarAg\FlysystemCloudinaryNova\CloudinaryImage::make('Image');
+    CloudinaryImage::make('Image');
 })->throws(Exception::class, 'Cloudinary disk is not configured.');
 
 it('does not throw an exception if cloudinary disk is configured', function () {
-    CodebarAg\FlysystemCloudinaryNova\CloudinaryImage::make('Image');
+    CloudinaryImage::make('Image');
 })->throwsNoExceptions();
 
 it('has the disk configured to cloudinary', function () {
-    $field = CodebarAg\FlysystemCloudinaryNova\CloudinaryImage::make('Image');
+    $field = CloudinaryImage::make('Image');
 
     expect($field->disk)->toBe('cloudinary');
 });
