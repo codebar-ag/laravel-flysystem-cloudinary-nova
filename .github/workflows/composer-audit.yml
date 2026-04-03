@@ -18,7 +18,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Nova registry auth uses repo secrets; unavailable on pull requests from forks.
   composer-audit:
+    if: ${{ github.repository == 'codebar-ag/laravel-flysystem-cloudinary-nova' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false) }}
     name: composer audit
     runs-on: ubuntu-latest
     timeout-minutes: 10

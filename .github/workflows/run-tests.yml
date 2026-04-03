@@ -7,7 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
+  # Nova registry auth uses repo secrets; unavailable on pull requests from forks.
   test:
+    if: ${{ github.repository == 'codebar-ag/laravel-flysystem-cloudinary-nova' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false) }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: true
@@ -45,10 +47,9 @@ jobs:
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Execute tests
-        run: cp phpunit.xml.dist phpunit.xml
-
-      - name: Execute tests
-        run: vendor/bin/pest --no-coverage
+        run: |
+          cp phpunit.xml.dist phpunit.xml
+          vendor/bin/pest --no-coverage
 
       - name: Store Log Artifacts
         if: failure()

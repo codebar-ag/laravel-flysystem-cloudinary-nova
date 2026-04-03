@@ -6,7 +6,9 @@ permissions:
   contents: write
 
 jobs:
+  # Pint workflow targets the canonical repo (Nova auth + auto-commit permissions).
   php-code-styling:
+    if: github.repository == 'codebar-ag/laravel-flysystem-cloudinary-nova'
     runs-on: ubuntu-latest
 
     steps:

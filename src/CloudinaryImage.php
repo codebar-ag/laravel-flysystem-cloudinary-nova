@@ -19,9 +19,14 @@ class CloudinaryImage extends Image
     {
         parent::__construct($name, $attribute, $disk, $storageCallback);
 
-        $configuredDisk = config('filesystems.disks.'.$this->getStorageDisk());
-        if (! $configuredDisk) {
-            throw new Exception('Cloudinary disk is not configured.');
+        $storageDisk = $this->getStorageDisk();
+        $configuredDisk = config('filesystems.disks.'.$storageDisk);
+
+        if (! is_array($configuredDisk) || ($configuredDisk['driver'] ?? null) !== 'cloudinary') {
+            throw new Exception(sprintf(
+                'CloudinaryImage requires filesystems.disks.%s to be configured with driver [cloudinary].',
+                $storageDisk
+            ));
         }
 
         $this->thumbnail(function () {

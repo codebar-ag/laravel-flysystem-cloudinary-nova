@@ -7,11 +7,11 @@ beforeEach(function () {
     config([
         'filesystems.disks.cloudinary' => [
             'driver' => 'cloudinary',
-            'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
-            'api_key' => env('CLOUDINARY_API_KEY'),
-            'api_secret' => env('CLOUDINARY_API_SECRET'),
+            'cloud_name' => 'x',
+            'api_key' => 'x',
+            'api_secret' => 'x',
             'url' => [
-                'secure' => (bool) env('CLOUDINARY_SECURE_URL', true),
+                'secure' => true,
             ],
         ],
     ]);
@@ -29,7 +29,7 @@ it('throws an exception if cloudinary disk is not configured', function () {
     ]);
 
     CloudinaryImage::make('Image');
-})->throws(Exception::class, 'Cloudinary disk is not configured.');
+})->throws(Exception::class, 'CloudinaryImage requires filesystems.disks.cloudinary to be configured with driver [cloudinary].');
 
 it('does not throw an exception if cloudinary disk is configured', function () {
     CloudinaryImage::make('Image');
@@ -45,11 +45,11 @@ it('uses a custom disk when provided', function () {
     config([
         'filesystems.disks.custom_cloudinary' => [
             'driver' => 'cloudinary',
-            'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
-            'api_key' => env('CLOUDINARY_API_KEY'),
-            'api_secret' => env('CLOUDINARY_API_SECRET'),
+            'cloud_name' => 'x',
+            'api_key' => 'x',
+            'api_secret' => 'x',
             'url' => [
-                'secure' => (bool) env('CLOUDINARY_SECURE_URL', true),
+                'secure' => true,
             ],
         ],
     ]);
@@ -71,4 +71,21 @@ it('throws when the chosen disk is not configured', function () {
     ]);
 
     CloudinaryImage::make('Image', null, 'other_disk');
-})->throws(Exception::class, 'Cloudinary disk is not configured.');
+})->throws(Exception::class, 'CloudinaryImage requires filesystems.disks.other_disk to be configured with driver [cloudinary].');
+
+it('throws when the chosen disk is not the cloudinary driver', function () {
+    config([
+        'filesystems.disks.cloudinary' => [
+            'driver' => 'cloudinary',
+            'cloud_name' => 'x',
+            'api_key' => 'x',
+            'api_secret' => 'x',
+        ],
+        'filesystems.disks.local_only' => [
+            'driver' => 'local',
+            'root' => sys_get_temp_dir(),
+        ],
+    ]);
+
+    CloudinaryImage::make('Image', null, 'local_only');
+})->throws(Exception::class, 'CloudinaryImage requires filesystems.disks.local_only to be configured with driver [cloudinary].');
