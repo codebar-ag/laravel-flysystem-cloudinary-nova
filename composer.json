@@ -17,17 +17,17 @@
         }
     ],
     "require": {
-        "php": "8.2.*|8.3.*|8.4.*",
-        "illuminate/contracts": "^12.0",
+        "php": "8.3.*|8.4.*|8.5.*",
+        "illuminate/contracts": "^13.0",
         "spatie/laravel-package-tools": "^1.19",
-        "codebar-ag/laravel-flysystem-cloudinary": "^v12.0",
-        "laravel/nova": "^5.2.6"
+        "codebar-ag/laravel-flysystem-cloudinary": "^13.0",
+        "laravel/nova": "^5.8"
     },
     "require-dev": {
         "laravel/pint": "^1.21",
-        "larastan/larastan": "^v3.1",
-        "orchestra/testbench": "^10.0",
-        "pestphp/pest": "^3.7",
+        "larastan/larastan": "^3.9",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^4.0",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan-deprecation-rules": "^2.0",
         "phpstan/phpstan-phpunit": "^2.0",
@@ -41,8 +41,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "CodebarAg\\FlysystemCloudinaryNova\\": "src/",
-            "CodebarAg\\FlysystemCloudinaryNova\\Database\\Factories\\": "database/factories/"
+            "CodebarAg\\FlysystemCloudinaryNova\\": "src/"
         }
     },
     "autoload-dev": {
@@ -52,8 +51,8 @@
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
+        "analyse": "vendor/bin/phpstan analyse -c phpstan.neon.dist",
+        "test": "vendor/bin/pest --no-coverage",
         "test-coverage": "vendor/bin/pest --coverage",
         "format": "vendor/bin/pint"
     },
@@ -71,6 +70,6 @@
             ]
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }

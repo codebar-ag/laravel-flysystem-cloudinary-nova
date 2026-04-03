@@ -31,6 +31,9 @@ jobs:
           php-version: '8.5'
           coverage: none
 
+      - name: Apply Nova license
+        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
+
       - name: Resolve dependencies and audit
         run: |
           composer update --no-interaction --no-ansi
