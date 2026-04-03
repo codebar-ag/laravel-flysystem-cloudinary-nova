@@ -22,7 +22,9 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Nova registry auth uses repo secrets; unavailable on pull requests from forks.
   phpstan:
+    if: ${{ github.repository == 'codebar-ag/laravel-flysystem-cloudinary-nova' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.fork == false) }}
     name: phpstan
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -32,11 +34,14 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@2.37.0
         with:
-          php-version: '8.4'
+          php-version: '8.5'
           coverage: none
+
+      - name: Apply Nova license
+        run: composer config http-basic.nova.laravel.com ${{ secrets.NOVA_USERNAME }} ${{ secrets.NOVA_LICENSE_KEY }}
 
       - name: Install composer dependencies
         uses: ramsey/composer-install@4.0.0
 
       - name: Run PHPStan
-        run: ./vendor/bin/phpstan --error-format=github
+        run: ./vendor/bin/phpstan analyse -c phpstan.neon.dist --error-format=github

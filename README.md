@@ -11,17 +11,15 @@
 - Cloudinary Account
 - [Laravel Flysystem Cloudinary](https://github.com/codebar-ag/laravel-flysystem-cloudinary)
 
-## 🛠 Requirements
+| Package | PHP | Laravel | Nova | Flysystem Cloudinary |
+|---------|-----|---------|------|----------------------|
+| v13.0 | ^8.3 - ^8.5 | 13.x | ^5.8 | ^13.0 |
+| v12.0 | ^8.2 - ^8.4 | 12.x | ^5.2.6 | ^12.0 |
+| v11.0 | ^8.2 - ^8.3 | 11.x | ^4.3 | ^11.0 |
+| v2.0.0 | ^8.2 | 11.x | ^4.3 | 3.0 |
+| v1.0.0 | ^8.2 | 10.x | ^4.3 | 3.0 |
 
-- Cloudinary Account
-
-| Package 	 | PHP 	       | Laravel 	 | Nova   | Flysystem 	 |
-|-----------|-------------|-----------|--------|-------------|
-| v12.0     | ^8.2 - ^8.4 | 12.x      | ^5.2.6 | 3.25.1      |
-| v11.0     | ^8.2 - ^8.3 | 11.x      | ^4.3   | 3.0         |
-| v2.0.0    | ^8.2        | 11.x      | ^4.3   | 3.0         |
-| v1.0.0    | ^8.2        | 10.x      | ^4.3   | 3.0         |
-
+Install [Laravel Flysystem Cloudinary v13](https://github.com/codebar-ag/laravel-flysystem-cloudinary/releases/tag/v13.0.0) (or compatible `^13.0`) alongside this package for Laravel 13.
 
 ## ⚙️ Installation
 
@@ -64,8 +62,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## 🙏 Credits
 
-- [Rhys Lees](https://github.com/RhysLees)
-- [Sebastian Fix](https://github.com/StanBarrows)
+- [Sebastian Bürgin-Fix](https://github.com/StanBarrows)
 - [All Contributors](../../contributors)
 - [Skeleton Repository from Spatie](https://github.com/spatie/package-skeleton-laravel)
 - [Laravel Package Training from Spatie](https://spatie.be/videos/laravel-package-training)
